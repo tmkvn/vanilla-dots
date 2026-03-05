@@ -28,7 +28,7 @@ if [ -f "$HOME/.tmux.conf" ]; then
     echo -e "${YELLOW}Backing up existing tmux config...${NC}"
     mv "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak"
 fi
-ln -sf "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 echo -e "${GREEN}[OK] tmux configured${NC}"
 
 echo -e "${BLUE}==> Installation complete!${NC}"
