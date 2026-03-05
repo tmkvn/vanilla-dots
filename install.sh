@@ -31,4 +31,10 @@ fi
 ln -sf "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 echo -e "${GREEN}[OK] tmux configured${NC}"
 
+# Add custom aliases to .bashrc
+if ! grep -q "source $DOTFILES_DIR/bash/.bashrc_extra" "$HOME/.bashrc"; then
+    echo "source $DOTFILES_DIR/bash/.bashrc_extra" >> "$HOME/.bashrc"
+    echo -e "${GREEN}[OK] Bash aliases added to .bashrc${NC}"
+fi
+
 echo -e "${BLUE}==> Installation complete!${NC}"
